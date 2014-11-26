@@ -17,9 +17,7 @@ import java.util.Map;
  */
 public class CombinedArticle extends Article{
     
-    public CombinedArticle(Article... wcs){
-        this((ArrayList<Article>) Arrays.asList(wcs));
-    }
+    
     
     
     public CombinedArticle(ArrayList<Article> wcList){
