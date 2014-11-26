@@ -61,8 +61,8 @@ public class KeywordsExtractor {
         ArrayList<Score> result=new ArrayList<Score>();
         Article article=new MMSegArticle(content,null);
         article.computeTFIDF(iindex);
-        int max=Math.min(topN, article.sortedTfidf.size());
-        for(int i=0;i<max;i++){
+        int min=Math.min(topN, article.sortedTfidf.size());
+        for(int i=0;i<min;i++){
             String word=article.sortedTfidf.get(i);
             double tfidf=article.tfidfMap.get(word);
             Score score=new Score(word, tfidf);
